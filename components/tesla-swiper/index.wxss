@@ -1,0 +1,96 @@
+.swiper {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+.swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.desc-float-container {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.desc-float-container .title {
+  margin-top: 200rpx;
+  font-size: 50rpx;
+}
+.desc-float-container .desc-content {
+  display: flex;
+  width: 100%;
+  margin-top: 700rpx;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.desc-content > view {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+.desc-content .desc-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.desc-content .desc-item .item-title {
+  font-weight: 500;
+  animation: fadeIn 1s;
+}
+
+.desc-content .desc-item .item-desc {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  animation: fadeIn 2s;
+}
+.desc-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  width: 80%;
+  height: 70rpx;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 40rpx;
+  color: white;
+  margin-top: 40rpx;
+}
+.desc-link {
+  font-size: 24rpx;
+  color: white;
+  text-decoration: underline;
+  margin-top: 20rpx;
+  pointer-events: all;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.pagination view {
+  width: 40rpx;
+  background: rgba(100, 100, 100, 0.1);
+  height: 4rpx;
+  transition: all 0.3s;
+}
+.pagination view.active {
+  background: white;
+}

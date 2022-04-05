@@ -1,0 +1,45 @@
+.product {
+  width: 100%;
+}
+.cover-container image {
+  width: 100%;
+}
+.content {
+  padding: 55rpx 48rpx;
+}
+.content .desc-container {
+  color: #7a7a7a;
+  line-height: 50rpx;
+}
+.content .lines-container {
+  margin-top: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.content .lines-container .line {
+  width: 300rpx;
+}
+.content .lines-container .line .line-name {
+  font-size: 36rpx;
+  line-clamp: 2;
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 10rpx;
+}
+
+.content .lines-container .line .line-item {
+  margin-top: 28rpx;
+}
+.content .lines-container .line .line-item .label {
+  font-size: 26rpx;
+  color: #a8a8a8;
+  font-weight: 400;
+}
+
+.content .lines-container .line .line-item .value {
+  margin-top: 14rpx;
+  font-size: 36rpx;
+}
+.content .lines-container .line .line-item .value text {
+  font-size: 28rpx;
+}

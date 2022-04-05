@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tesla-swiper": "/components/tesla-swiper/index"
+  }
+}

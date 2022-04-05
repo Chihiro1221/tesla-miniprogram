@@ -1,0 +1,32 @@
+<view class="page">
+  <tesla-swiper swiperList="{{swiperList}}" style="width:100%"></tesla-swiper>
+  <view class="magazine">
+    <view class="title">T-ZONE</view>
+    <image class="cover" src="/images/tesla.png"></image>
+    <view class="time">2021年9月1号</view>
+  </view>
+  <view class="card-container">
+    <image mode="widthFix" class="credit-cover" src="https://china-community-app.tesla.cn/wechatmini/credit_card.png"></image>
+    <view class="content">
+      <view class="title">贷款计算器</view>
+      <view class="subtitle">定制我的金融方案</view>
+    </view>
+  </view>
+  <view class="card-container">
+    <image mode="widthFix" class="video-cover" src="https://china-community-app.tesla.cn/wechatmini/card_bg.png"></image>
+    <view class="content">
+      <view class="title">新手使用指南</view>
+      <view class="subtitle">观看视频</view>
+    </view>
+  </view>
+  <view class="icon-area">
+    <view>
+      <image class="car" mode="widthFix" src="/images/ic_clean_engry_policy.svg"></image>
+      <view>新能源政策</view>
+    </view>
+    <view>
+      <image class="sign" mode="widthFix" src="/images/ic_traidin.svg"></image>
+      <view>新能源政策</view>
+    </view>
+  </view>
+</view>

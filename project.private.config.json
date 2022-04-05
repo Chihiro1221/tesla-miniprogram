@@ -1,0 +1,24 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "产品详情",
+          "pathName": "pages/product/index",
+          "query": "id=d2fe6f20624a63af04ab87e9334c3ecf",
+          "scene": null,
+          "launchMode": "default"
+        }
+      ]
+    }
+  }
+}
