@@ -9,7 +9,9 @@
 }
 .content .desc-container {
   color: #7a7a7a;
+  font-weight: normal;
   line-height: 50rpx;
+  font-size: 28rpx;
 }
 .content .lines-container {
   margin-top: 120rpx;
@@ -42,4 +44,8 @@
 }
 .content .lines-container .line .line-item .value text {
   font-size: 28rpx;
+}
+.content .footer {
+  font-size: 24rpx;
+  color: #c3c3c3;
 }

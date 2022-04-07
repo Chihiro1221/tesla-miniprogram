@@ -1,0 +1,28 @@
+<view class="page">
+  <view class="top-tip">
+    请填写下方申请表
+  </view>
+  <form class="form" bind:submit="formSubmit">
+    <view class="name-container">
+      <tesla-input required label="姓氏"></tesla-input>
+      <tesla-input required label="名字"></tesla-input>
+    </view>
+    <tesla-input required label="邮箱"></tesla-input>
+    <tesla-input required label="手机号"></tesla-input>
+    <picker bindchange="bindProvincePickerChange" value="{{province}}" range="{{provinces}}">
+      <tesla-input required label="省份" value="{{provinces[province]}}"></tesla-input>
+    </picker>
+    <picker bindchange="bindCityPickerChange" value="{{city}}" range="{{cities}}">
+      <tesla-input required label="城市" value="{{cities[city]}}"></tesla-input>
+    </picker>
+    <view class="checkbox-container">
+      <label class="checkbox">
+        <checkbox color="#000" value="cb" checked="true" /><text>获取 Tesla 最新资讯</text>
+      </label>
+    </view>
+    <view class="bottom-tip">
+      为什么试驾要预约？为保证每位客户都享受到一对一的试驾体验，我们需要根据您提供的信息来提前安排合适的试驾地点和时间。如您填写并提交上述信息，表示您同意特斯拉按照客户隐私政策(www.tesla.cn/about/legal)收集、使用这些信息。
+    </view>
+    <button type="primary" class="submitBtn">预约试驾</button>
+  </form>
+</view>

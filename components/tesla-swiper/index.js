@@ -28,12 +28,14 @@ Component({
       });
     },
     gotoProduct() {
-      console.log(this.properties);
-      // const current = this.data.swiperList[this.data.currentSwiper];
-      // if (!current.product) return;
-      // wx.navigateTo({
-      //   url: `/pages/product/index?id=${current.product}`,
-      // });
+      const current = this.properties.swiperList[this.data.current];
+      if (!current.product) return;
+      wx.navigateTo({
+        url: `/pages/product/index?id=${current.product}`,
+      });
+    },
+    showBookDialog() {
+      this.triggerEvent("show-book-dialog");
     },
   },
 });

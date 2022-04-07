@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -14,6 +15,13 @@
         {
           "name": "产品详情",
           "pathName": "pages/product/index",
+          "query": "id=d2fe6f20624a63af04ab87e9334c3ecf",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "预约页面",
+          "pathName": "pages/test-drive/index",
           "query": "id=d2fe6f20624a63af04ab87e9334c3ecf",
           "scene": null,
           "launchMode": "default"

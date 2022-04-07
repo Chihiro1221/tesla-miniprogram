@@ -6,7 +6,7 @@
     <view class="desc-container">
       <rich-text nodes="{{product.description}}" class="description"></rich-text>
     </view>
-    <scroll-view scroll-x="true" style="height: 500px;">
+    <scroll-view scroll-x="true" style="height: 350px;">
       <view class="lines-container" style="{{'width:' + product.product_lines.length * 350 + 'rpx'}}">
         <view class="line" wx:for="{{product.product_lines}}" wx:key="index">
           <view class="line-name">
@@ -34,5 +34,8 @@
         </view>
       </view>
     </scroll-view>
+    <view class="footer">
+      贯之的高性能与高科技配置。中国制造的Model3标准续航升级版将进一步拉低Model 3的起售价格，同时保持了Tesla一以贯之的高性能与高科技配置。中国制造
+    </view>
   </view>
 </view>

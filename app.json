@@ -1,10 +1,11 @@
 {
-    "pages": ["pages/index/index", "pages/map/index", "pages/activity/index", "pages/product/index"],
+    "pages": ["pages/index/index", "pages/map/index", "pages/activity/index", "pages/product/index", "pages/test-drive/index"],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Tesla",
-        "navigationBarTextStyle": "black"
+        "navigationBarTitleText": "特斯拉 Tesla",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#fff"
     },
     "tabBar": {
         "color": "#c3c3c3",

@@ -1,5 +1,5 @@
 <view class="page">
-  <tesla-swiper swiperList="{{swiperList}}" style="width:100%"></tesla-swiper>
+  <tesla-swiper bind:show-book-dialog="showBookDialog" swiperList="{{swiperList}}" style="width:100%"></tesla-swiper>
   <view class="magazine">
     <view class="title">T-ZONE</view>
     <image class="cover" src="/images/tesla.png"></image>
@@ -28,5 +28,21 @@
       <image class="sign" mode="widthFix" src="/images/ic_traidin.svg"></image>
       <view>新能源政策</view>
     </view>
+  </view>
+  <view class="book-dialog">
+    <page-container show="{{bookDialogVisible}}" round="{{true}}" overlay="{{true}}" position="{{'bottom'}}" close-on-slide-down="{{false}}">
+      <view class=" detail-page">
+        <view class="head">
+          <view class="head-title">选择车型</view>
+          <view class="head-close-icon" bind:tap="closeBookDialog">×</view>
+        </view>
+        <view class="content">
+          <view bind:tap="gotoProduct" data-id="{{item._id}}" wx:for="{{products}}" wx:key="index" class="content-item">
+            <view class="item-title">{{item.name}}</view>
+            <image mode="heightFix" class="item-image" src="{{item.car_picture}}"></image>
+          </view>
+        </view>
+      </view>
+    </page-container>
   </view>
 </view>

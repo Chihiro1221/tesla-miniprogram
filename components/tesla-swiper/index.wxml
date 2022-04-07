@@ -14,7 +14,7 @@
         </view>
       </view>
     </view>
-    <view class="desc-btn">立即订购</view>
+    <view class="desc-btn" bind:tap="showBookDialog">立即订购</view>
     <view class="desc-link" wx:if="{{swiperList[current].product}}" bindtap="gotoProduct">查看参数</view>
     <view class="pagination">
       <view class="{{current !== index || 'active'}}" wx:for="{{swiperList}}" wx:key="index"></view>

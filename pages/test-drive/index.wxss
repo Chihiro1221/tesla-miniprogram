@@ -1,0 +1,51 @@
+.page {
+  background: #f7f7f7;
+  height: 100vh;
+  padding-bottom: 80rpx;
+}
+.page .top-tip {
+  text-align: center;
+  font-weight: normal;
+  color: #888888;
+  font-size: 28rpx;
+  padding: 40rpx 0;
+}
+.form {
+  display: block;
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.form .name-container {
+  display: flex;
+  gap: 30rpx;
+}
+
+.form .checkbox-container {
+  padding-top: 20rpx;
+}
+.form .checkbox-container .checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.form .bottom-tip {
+  font-size: 28rpx;
+  color: #777777;
+  margin-top: 36rpx;
+  line-height: 40rpx;
+}
+
+.form .submitBtn {
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #486ada;
+  border-radius: 40rpx;
+  font-weight: normal;
+  margin-top: 55rpx;
+}

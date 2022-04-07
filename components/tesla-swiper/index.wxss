@@ -26,7 +26,7 @@
 .desc-float-container .desc-content {
   display: flex;
   width: 100%;
-  margin-top: 700rpx;
+  margin-top: 70%;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -69,6 +69,7 @@
   height: 70rpx;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 40rpx;
+  pointer-events: all;
   color: white;
   margin-top: 40rpx;
 }
