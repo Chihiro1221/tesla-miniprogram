@@ -7,8 +7,8 @@
       <tesla-input class="tesla-input" required label="姓氏" model:value="{{lastName}}"></tesla-input>
       <tesla-input class="tesla-input" required label="名字" model:value="{{firstName}}"></tesla-input>
     </view>
-    <tesla-input class="tesla-input" required label="邮箱" model:value="{{email}}"></tesla-input>
-    <tesla-input class="tesla-input" required label="手机号" model:value="{{mobile}}"></tesla-input>
+    <tesla-input class="tesla-input" required rules="{{[{type:'email'}]}}" label="邮箱" model:value="{{email}}"></tesla-input>
+    <tesla-input class="tesla-input" required rules="{{[{type:'mobile'}]}}" label="手机号" model:value="{{mobile}}"></tesla-input>
     <picker bindchange="bindProvincePickerChange" value="{{province}}" range-key="fullname" range="{{provinceTree}}">
       <tesla-input required label="省份" value="{{provinceTree[province].fullname}}"></tesla-input>
     </picker>
