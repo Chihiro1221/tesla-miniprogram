@@ -1,20 +1,67 @@
-// pages/test-drive/index.js
+const app = getApp();
+import { buildProvincesToTree } from "../../utils/location";
 Page({
   /**
    * 页面的初始数据
    */
   data: {
     product: null,
-    provinces: ["河北", "天津", "北京", "黑龙江"],
-    cities: ["邢台", "沈阳", "深圳", "杭州"],
+    provinceTree: null,
     province: 0,
     city: 0,
+    lastName: "",
+    firstName: "",
+    email: "",
+    mobile: "",
+    isChecked: true,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function ({ id } = {}) {
+    this.db = wx.cloud.database();
+    this._loadProduct(id);
+    this._loadProvinceAndCity();
+  },
+
+  async formSubmit() {
+    if (!this._validate()) return;
+    wx.showLoading({
+      title: "加载中",
+    });
+    this._handleSubmit();
+  },
+
+  async _handleSubmit() {
+    const { product, provinceTree, province, city, ...data } = this.data;
+    data.province = provinceTree[province].fullname;
+    data.city = provinceTree[province]["children"][city].fullname;
+    data.product = this.data.product._id;
+    const res = await this.db.collection("test-drive").add({
+      data,
+    });
+    if (res) {
+      wx.hideLoading();
+      wx.showModal({
+        title: "预约成功",
+        content: "感谢您提交Tesla试驾请求。我们的工作人员会及时跟您电话联系",
+        showCancel: false,
+        success() {
+          wx.navigateBack({
+            delta: 1,
+          });
+        },
+      });
+    }
+  },
+
+  _validate() {
+    const components = this.selectAllComponents(".tesla-input");
+    return components.every((component) => !component.check());
+  },
+
+  _loadProduct(id) {
     this.db = wx.cloud.database();
     this.db
       .collection("product")
@@ -27,18 +74,37 @@ Page({
       });
   },
 
-  formSubmit() {
-    console.log(1);
+  _loadProvinceAndCity() {
+    const { province, city } = app.globalData.userLocation;
+    const provinceTree = buildProvincesToTree();
+    const currentProvince = provinceTree.findIndex(
+      (pro) => pro.fullname === province
+    );
+    const currentCity = provinceTree[currentProvince].children.findIndex(
+      (c) => c.fullname === city
+    );
+    this.setData({
+      province: currentProvince,
+      city: currentCity,
+      provinceTree,
+    });
   },
+
   bindProvincePickerChange(e) {
     this.setData({
       province: e.detail.value,
+      city: 0,
     });
   },
+
   bindCityPickerChange(e) {
     this.setData({
       city: e.detail.value,
     });
+  },
+
+  checkboxChange() {
+    this.setData({ isChecked: !this.data.isChecked });
   },
 
   /**

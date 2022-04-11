@@ -10,11 +10,11 @@ Component({
     },
     label: {
       type: String,
-      value: null,
+      value: "",
     },
     value: {
-      type: Number | String,
-      value: null,
+      type: String,
+      value: "",
     },
   },
 
@@ -29,13 +29,19 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onInputChange({ detail } = {}) {
+    onInputChange() {
+      this.check();
+    },
+
+    check() {
       if (this.properties.required) {
-        const { value } = detail || {};
+        const isError = this.data.value ? false : true;
         this.setData({
-          isError: value ? false : true,
+          isError,
         });
+        return isError;
       }
+      return false;
     },
   },
 });
