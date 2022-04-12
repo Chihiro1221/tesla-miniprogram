@@ -4,11 +4,25 @@ Page({
     swiperList: [],
     products: [],
     bookDialogVisible: false,
+    magazines: [],
   },
 
   onLoad() {
     this._loadSwiper();
     this._loadProduct();
+    this._loadMagazine();
+  },
+
+  _loadMagazine() {
+    this.db
+      .collection("magazine")
+      .get()
+      .then((res) => {
+        const { data } = res || {};
+        this.setData({
+          magazines: data,
+        });
+      });
   },
 
   _loadProduct() {
@@ -39,21 +53,31 @@ Page({
         });
       });
   },
+
   showBookDialog() {
     this.setData({
       bookDialogVisible: true,
     });
   },
+
   closeBookDialog() {
     this.setData({
       bookDialogVisible: false,
     });
   },
+
   gotoProduct(e) {
     const { id } = e.target.dataset || {};
     wx.navigateTo({
       url: `/pages/test-drive/index?id=${id}`,
     });
     this.setData({ bookDialogVisible: false });
+  },
+
+  gotoMagazine(e) {
+    const { id } = e.target.dataset || {};
+    wx.navigateTo({
+      url: `/pages/magazine/index?id=d50b428d62552b6700154e6814db55bc`,
+    });
   },
 });

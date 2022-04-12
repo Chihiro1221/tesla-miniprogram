@@ -1,10 +1,12 @@
 <view class="page">
   <tesla-swiper bind:show-book-dialog="showBookDialog" swiperList="{{swiperList}}" style="width:100%"></tesla-swiper>
-  <view class="magazine">
-    <view class="title">T-ZONE</view>
-    <image class="cover" src="/images/tesla.png"></image>
-    <view class="time">2021年9月1号</view>
-  </view>
+  <block wx:for="{{magazines}}" wx:key="index">
+    <view bind:tap="gotoMagazine" data-id="d50b428d62552b6700154e6814db55bc" class="magazine">
+      <view class="title">{{item.title}}</view>
+      <image class="cover" src="{{item.cover}}"></image>
+      <view class="time">2021年9月1号</view>
+    </view>
+  </block>
   <view class="card-container">
     <image mode="widthFix" class="credit-cover" src="https://china-community-app.tesla.cn/wechatmini/credit_card.png"></image>
     <view class="content">

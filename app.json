@@ -1,5 +1,5 @@
 {
-    "pages": ["pages/index/index", "pages/map/index", "pages/activity/index", "pages/product/index", "pages/test-drive/index"],
+    "pages": ["pages/index/index", "pages/map/index", "pages/activity/index", "pages/product/index", "pages/test-drive/index", "pages/magazine/index"],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
