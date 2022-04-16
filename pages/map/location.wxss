@@ -1,0 +1,73 @@
+.location-container {
+  padding: 45rpx 40rpx;
+}
+
+.location {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding-bottom: 45rpx;
+  border-bottom: 2rpx solid #eeeeee;
+}
+.location .desc .title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.location .desc .loc {
+  margin-top: 34rpx;
+  color: #5d5d5e;
+  font-size: 28rpx;
+}
+.location .desc .classification {
+  margin-top: 34rpx;
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+}
+.location .desc .classification view {
+  padding: 6rpx 20rpx;
+  border: 2rpx solid #f3f3f3;
+  border-radius: 20rpx;
+  color: #808081;
+  font-size: 24rpx;
+}
+
+.location .coordinate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.location .coordinate .navigate-icon {
+  width: 38rpx;
+  height: 38rpx;
+  margin-bottom: 30rpx;
+}
+
+.location .coordinate .distance {
+  color: #737373;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.info-container {
+  margin-top: 60rpx;
+}
+
+.info-container .info {
+  margin-bottom: 40rpx;
+}
+.info-container .info .title {
+  margin-bottom: 26rpx;
+  font-weight: bold;
+  color: black;
+  font-size: 28rpx;
+}
+.info-container .info rich-text {
+  color: #505051;
+  font-size: 28rpx;
+}
+
+.serve-info .mobile {
+  font-size: 28rpx;
+  text-decoration: underline;
+}

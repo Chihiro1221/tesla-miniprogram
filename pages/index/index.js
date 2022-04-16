@@ -75,9 +75,9 @@ Page({
   },
 
   gotoMagazine(e) {
-    const { id } = e.target.dataset || {};
+    const { id } = e.currentTarget.dataset || {};
     wx.navigateTo({
-      url: `/pages/magazine/index?id=d50b428d62552b6700154e6814db55bc`,
+      url: `/pages/magazine/index?id=${id}`,
     });
   },
 });

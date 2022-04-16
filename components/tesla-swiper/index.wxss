@@ -18,9 +18,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+}
+.desc-float-container .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .desc-float-container .title {
-  margin-top: 200rpx;
+  margin-top: 100rpx;
   font-size: 50rpx;
 }
 .desc-float-container .desc-content {

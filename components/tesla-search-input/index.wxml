@@ -1,0 +1,4 @@
+<view class="map-search">
+  <image class="search-icon" src="/images/search.png"></image>
+  <input type="text" class="input" placeholder-class="input-placeholder" placeholder="搜索" />
+</view>

@@ -6,18 +6,20 @@
   </swiper>
   <view class="desc-float-container">
     <view class="title">{{swiperList[current].title}}</view>
-    <view class="desc-content">
-      <view wx:if="{{current === index }}" wx:for="{{swiperList}}" wx:key="index">
-        <view class="desc-item" wx:for="{{item.config}}" wx:key="index">
-          <view class="item-title">{{item.title}}</view>
-          <view class="item-desc">{{item.subtitle}}</view>
+    <view class="content">
+      <view class="desc-content">
+        <view wx:if="{{current === index }}" wx:for="{{swiperList}}" wx:key="index">
+          <view class="desc-item" wx:for="{{item.config}}" wx:key="index">
+            <view class="item-title">{{item.title}}</view>
+            <view class="item-desc">{{item.subtitle}}</view>
+          </view>
         </view>
       </view>
-    </view>
-    <view class="desc-btn" bind:tap="showBookDialog">立即订购</view>
-    <view class="desc-link" wx:if="{{swiperList[current].product}}" bindtap="gotoProduct">查看参数</view>
-    <view class="pagination">
-      <view class="{{current !== index || 'active'}}" wx:for="{{swiperList}}" wx:key="index"></view>
+      <view class="desc-btn" bind:tap="showBookDialog">立即订购</view>
+      <view class="desc-link" wx:if="{{swiperList[current].product}}" bindtap="gotoProduct">查看参数</view>
+      <view class="pagination">
+        <view class="{{current !== index || 'active'}}" wx:for="{{swiperList}}" wx:key="index"></view>
+      </view>
     </view>
   </view>
 </view>

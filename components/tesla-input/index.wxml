@@ -1,5 +1,5 @@
 <view class="form-item">
   <view wx:if="{{label}}" class="label">{{label}}</view>
-  <input model:value="{{value}}" bind:input="onInputChange" class="input {{isError ? 'error' :''}}" name="input" />
+  <input disabled="{{disabled}}" model:value="{{value}}" bind:input="onInputChange" class="input {{isError ? 'error' :''}}" name="input" />
   <view wx:if="{{isError}}" class="error-message">{{errorMessage}}</view>
 </view>

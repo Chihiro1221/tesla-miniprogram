@@ -10,10 +10,10 @@
     <tesla-input class="tesla-input" required rules="{{[{type:'email'}]}}" label="邮箱" model:value="{{email}}"></tesla-input>
     <tesla-input class="tesla-input" required rules="{{[{type:'mobile'}]}}" label="手机号" model:value="{{mobile}}"></tesla-input>
     <picker bindchange="bindProvincePickerChange" value="{{province}}" range-key="fullname" range="{{provinceTree}}">
-      <tesla-input required label="省份" value="{{provinceTree[province].fullname}}"></tesla-input>
+      <tesla-input disabled required label="省份" value="{{provinceTree[province].fullname}}"></tesla-input>
     </picker>
     <picker bindchange="bindCityPickerChange" value="{{city}}" range-key="fullname" range="{{provinceTree[province].children}}">
-      <tesla-input required label="城市" value="{{provinceTree[province].children[city].fullname}}"></tesla-input>
+      <tesla-input disabled required label="城市" value="{{provinceTree[province].children[city].fullname}}"></tesla-input>
     </picker>
     <view class="checkbox-container">
       <label class="checkbox">

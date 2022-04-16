@@ -1,0 +1,51 @@
+.map-container {
+  position: relative;
+}
+.map-container .map {
+  width: 100%;
+  height: 100vh;
+}
+
+.map-container .location-icon {
+  position: absolute;
+  bottom: 50rpx;
+  right: 42rpx;
+  width: 65rpx;
+  height: 65rpx;
+}
+.map-container .classification {
+  position: absolute;
+  top: 200rpx;
+  left: 36rpx;
+}
+
+.map-container .classification .item {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 40rpx;
+  padding: 4rpx 0;
+  padding-right: 20rpx;
+  box-shadow: 4rpx 4rpx 20rpx rgba(0, 0, 0, 0.1);
+}
+
+.map-container .classification .item .icon {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  opacity: 0.5;
+}
+
+.map-container .classification .item .name {
+  font-size: 24rpx;
+  color: #444;
+  opacity: 0.5;
+}
+
+.map-container .classification .item.active .name {
+  opacity: 1;
+}
+
+.map-container .classification .item.active .icon {
+  opacity: 1;
+}

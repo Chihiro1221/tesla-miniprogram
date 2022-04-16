@@ -1,0 +1,23 @@
+.map-search {
+  width: 450rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 6rpx 24rpx;
+  border-radius: 40rpx;
+  box-shadow: 4rpx 4rpx 20rpx rgba(0, 0, 0, 0.1);
+}
+
+.map-search .input {
+  font-size: 24rpx;
+  margin-left: 20rpx;
+}
+
+.map-search .input-placeholder {
+  font-size: 24rpx;
+}
+
+.map-search .search-icon {
+  width: 25rpx;
+  height: 25rpx;
+}

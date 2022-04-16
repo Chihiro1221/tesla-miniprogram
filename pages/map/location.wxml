@@ -1,0 +1,29 @@
+<view class="location-container">
+  <view class="location">
+    <view class="desc">
+      <view class="title">{{markerInfo.name}}</view>
+      <view class="loc">{{address}}</view>
+      <view class="classification">
+        <view>{{markerInfo.classification_id.name}}</view>
+      </view>
+    </view>
+    <view class="coordinate">
+      <image class="navigate-icon" src="/images/navigate.png"></image>
+      <view class="distance">{{calculateDistance}}</view>
+    </view>
+  </view>
+  <view class="info-container">
+    <view class="time-info info">
+      <view class="title">时间信息</view>
+      <rich-text nodes="{{markerInfo.time_info}}"></rich-text>
+    </view>
+    <view class="recharge-info info">
+      <view class="title">充电信息</view>
+      <rich-text nodes="{{markerInfo.recharge_info}}"></rich-text>
+    </view>
+    <view wx:for="{{markerInfo.serve_mobile}}" wx:key="index" class="serve-info info">
+      <view class="title">服务电话</view>
+      <view class="mobile">{{item}}</view>
+    </view>
+  </view>
+</view>

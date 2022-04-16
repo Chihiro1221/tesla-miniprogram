@@ -30,6 +30,20 @@
           "name": "杂志详情",
           "pathName": "pages/magazine/index",
           "query": "id=d50b428d62552b6700154e6814db55bc",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "地图页面",
+          "pathName": "pages/map/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "坐标详情",
+          "pathName": "pages/map/location",
+          "query": "id=1cf827d0625933f80006c4a25d705593",
           "scene": null,
           "launchMode": "default"
         }

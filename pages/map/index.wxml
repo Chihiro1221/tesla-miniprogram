@@ -1,3 +1,13 @@
-<view>
-  map...
+<view class="map-container">
+  <map bindmarkertap="clickMarker" markers="{{markers}}" show-location enable-3D id="mapId" class="map" latitude="{{lat}}" longitude="{{lng}}"></map>
+  <image bind:tap="moveIntialLocation" class="location-icon" src="/images/location.png"></image>
+  <tesla-search-input style="position: absolute;top: 100rpx;left: 36rpx;"></tesla-search-input>
+  <scroll-view scroll-x class="classification">
+    <view style="{{'display:flex;gap:8rpx;width:' + (markerClassifications.length * 210)+'rpx'}}">
+      <view class="item {{!item.isActive || 'active'}}" wx:for="{{markerClassifications}}" wx:key="index" data-id="{{item._id}}" bind:tap="changeMarkerClassification">
+        <image class="icon" src="{{item.icon_path}}"></image>
+        <text class="name">{{item.name}}</text>
+      </view>
+    </view>
+  </scroll-view>
 </view>
