@@ -1,4 +1,5 @@
 <view class="map-search">
   <image class="search-icon" src="/images/search.png"></image>
-  <input type="text" class="input" placeholder-class="input-placeholder" placeholder="搜索" />
+  <input type="text" bind:input="onChange" class="input" value="{{value}}" placeholder-class="input-placeholder" placeholder="搜索" />
+  <image style="margin-left: 20rpx;" bind:tap="clearValue" wx:if="{{value}}" class="search-icon" src="/images/cancel.png"></image>
 </view>

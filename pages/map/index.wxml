@@ -1,8 +1,8 @@
 <view class="map-container">
-  <map bindmarkertap="clickMarker" markers="{{markers}}" show-location enable-3D id="mapId" class="map" latitude="{{lat}}" longitude="{{lng}}"></map>
-  <image bind:tap="moveIntialLocation" class="location-icon" src="/images/location.png"></image>
-  <tesla-search-input style="position: absolute;top: 100rpx;left: 36rpx;"></tesla-search-input>
-  <scroll-view scroll-x class="classification">
+  <map wx:if="{{!search}}" bindmarkertap="clickMarker" markers="{{markers}}" show-location enable-3D id="mapId" class="map" latitude="{{lat}}" longitude="{{lng}}"></map>
+  <image wx:if="{{!search}}" bind:tap="moveIntialLocation" class="location-icon" src="/images/location.png"></image>
+  <tesla-search-input bind:on-search="onSearch" value="{{search}}" style="position: absolute;top: 100rpx;left: 36rpx;"></tesla-search-input>
+  <scroll-view wx:if="{{!search}}" scroll-x class="classification">
     <view style="{{'display:flex;gap:8rpx;width:' + (markerClassifications.length * 210)+'rpx'}}">
       <view class="item {{!item.isActive || 'active'}}" wx:for="{{markerClassifications}}" wx:key="index" data-id="{{item._id}}" bind:tap="changeMarkerClassification">
         <image class="icon" src="{{item.icon_path}}"></image>
@@ -10,4 +10,20 @@
       </view>
     </view>
   </scroll-view>
+  <view wx:else class="search-container">
+    <view class="search-item">
+      <image class="icon" src="/images/location_search.png"></image>
+      <view class="item-content">
+        <view class="title">伤害中医院</view>
+        <view class="address">浙江上海师傅电话就按劳动法尽量快</view>
+      </view>
+    </view>
+    <view class="search-item">
+      <image class="icon" src="/images/location_search.png"></image>
+      <view class="item-content">
+        <view class="title">伤害中医院</view>
+        <view class="address">浙江上海师傅电话就按劳动法尽量快</view>
+      </view>
+    </view>
+  </view>
 </view>

@@ -13,6 +13,8 @@ Page({
     originalMarkers: null,
     // 打包后的标识数据
     markers: null,
+    // 搜索
+    search: 'adfasd',
   },
 
   /**
@@ -120,6 +122,12 @@ Page({
 
   moveIntialLocation() {
     this._mapContext.moveToLocation()
+  },
+
+  onSearch({ detail }) {
+    this.setData({
+      search: detail,
+    })
   },
 
   /**

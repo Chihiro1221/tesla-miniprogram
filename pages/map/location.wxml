@@ -8,7 +8,7 @@
       </view>
     </view>
     <view class="coordinate">
-      <image class="navigate-icon" src="/images/navigate.png"></image>
+      <image bind:tap="gotoNavigate" class="navigate-icon" src="/images/navigate.png"></image>
       <view class="distance">{{calculateDistance}}</view>
     </view>
   </view>
@@ -23,7 +23,7 @@
     </view>
     <view wx:for="{{markerInfo.serve_mobile}}" wx:key="index" class="serve-info info">
       <view class="title">服务电话</view>
-      <view class="mobile">{{item}}</view>
+      <view class="mobile" bind:tap="callMobile" data-phone="{{item}}">{{item}}</view>
     </view>
   </view>
 </view>

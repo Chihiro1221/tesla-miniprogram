@@ -101,6 +101,28 @@ Page({
     })
   },
 
+  gotoNavigate() {
+    const {
+      address,
+      markerInfo: { latitude, longitude, name },
+    } = this.data
+
+    wx.openLocation({
+      latitude,
+      longitude,
+      name,
+      address,
+    })
+  },
+
+  // 拨打手机
+  callMobile(e) {
+    const { phone } = e.currentTarget.dataset
+    wx.makePhoneCall({
+      phoneNumber: phone,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

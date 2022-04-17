@@ -49,3 +49,30 @@
 .map-container .classification .item.active .icon {
   opacity: 1;
 }
+
+.search-container {
+  padding: 215rpx 50rpx;
+}
+
+.search-container .search-item {
+  margin-bottom: 45rpx;
+  display: flex;
+  align-items: center;
+}
+
+.search-container .search-item .icon {
+  width: 20rpx;
+  height: 28rpx;
+  margin-right: 30rpx;
+}
+
+.search-container .search-item .item-content .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 14rpx;
+}
+
+.search-container .search-item .item-content .address {
+  font-size: 26rpx;
+  color: #777778;
+}

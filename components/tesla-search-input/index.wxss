@@ -11,6 +11,7 @@
 .map-search .input {
   font-size: 24rpx;
   margin-left: 20rpx;
+  flex: 1;
 }
 
 .map-search .input-placeholder {
