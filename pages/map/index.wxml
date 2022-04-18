@@ -11,18 +11,11 @@
     </view>
   </scroll-view>
   <view wx:else class="search-container">
-    <view class="search-item">
+    <view class="search-item" wx:for="{{searchAddress}}" wx:key="index" data-location="{{item.location}}" bind:tap="moveToLocation">
       <image class="icon" src="/images/location_search.png"></image>
       <view class="item-content">
-        <view class="title">伤害中医院</view>
-        <view class="address">浙江上海师傅电话就按劳动法尽量快</view>
-      </view>
-    </view>
-    <view class="search-item">
-      <image class="icon" src="/images/location_search.png"></image>
-      <view class="item-content">
-        <view class="title">伤害中医院</view>
-        <view class="address">浙江上海师傅电话就按劳动法尽量快</view>
+        <view class="title">{{item.title}}</view>
+        <view class="address">{{item.address}}</view>
       </view>
     </view>
   </view>

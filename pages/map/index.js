@@ -1,5 +1,10 @@
 // pages/map/index.js
 const app = getApp()
+// pages/map/location.js
+const QQMapWX = require('../../libs/qq-map/index.js')
+const qqmapsdk = new QQMapWX({
+  key: 'AXLBZ-UU7E4-NDZUP-DODDO-7C6RV-YYFZZ',
+})
 Page({
   /**
    * 页面的初始数据
@@ -14,7 +19,9 @@ Page({
     // 打包后的标识数据
     markers: null,
     // 搜索
-    search: 'adfasd',
+    search: '',
+    // 周边城市
+    searchAddress: [],
   },
 
   /**
@@ -29,7 +36,6 @@ Page({
   // 点击标识点
   clickMarker(e) {
     const { markerId } = e.detail
-
     wx.navigateTo({
       url: `../map/location?id=${this.data.markers[markerId]._id}`,
     })
@@ -41,9 +47,13 @@ Page({
     const markerClassifications = this.data.markerClassifications
     const activeClassification = markerClassifications.find((c) => c._id === id)
     activeClassification.isActive = !activeClassification.isActive
+    const markers = this._buildMarker(this._filterCurrentClassificationOfMarkers())
+    // 在重新过滤之前先查看是否有搜索定位
+    const searchLocation = this.data.markers.find((item) => item.id === 99999)
+    markers.push(searchLocation)
     this.setData({
       markerClassifications,
-      markers: this._buildMarker(this._filterCurrentClassificationOfMarkers()),
+      markers,
     })
   },
 
@@ -120,13 +130,60 @@ Page({
     })
   },
 
+  // 跳转到默认位置
   moveIntialLocation() {
     this._mapContext.moveToLocation()
+    this._clearSearchMarker()
   },
 
+  // 搜索
   onSearch({ detail }) {
     this.setData({
       search: detail,
+    })
+    qqmapsdk.getSuggestion({
+      keyword: detail,
+      page_size: 20,
+      success: ({ data }) => {
+        this.setData({
+          searchAddress: data,
+        })
+      },
+    })
+  },
+
+  // 跳转到指定位置
+  moveToLocation(e) {
+    const {
+      location: { lat: latitude, lng: longitude },
+    } = e.currentTarget.dataset
+    this._clearSearchMarker()
+    this.data.markers.push({
+      id: 99999,
+      latitude,
+      longitude,
+      height: 35,
+      width: 35,
+      iconPath: '../../images/Pin.png',
+    })
+    this.setData({
+      search: '',
+      markers: this.data.markers,
+    })
+    // Todo:有的时候跳转不生效
+    this._mapContext.moveToLocation({
+      latitude,
+      longitude,
+    })
+  },
+
+  // 清除搜索图标
+  _clearSearchMarker() {
+    const index = this.data.markers.findIndex((item) => item.id === 99999)
+    if (index === -1) return
+    this.data.markers.splice(index, 1)
+    this.setData({
+      markers: this.data.markers,
     })
   },
 
