@@ -24,6 +24,17 @@ Component({
       type: Boolean,
       value: false,
     },
+    picker: {
+      type: Boolean,
+      value: false,
+    },
+    disabledClass: {
+      type: Boolean,
+      value: false,
+    },
+    tip: {
+      type: String,
+    },
   },
 
   /**
@@ -56,16 +67,20 @@ Component({
     },
 
     _validateRules() {
+      let isError
       this.properties.rules.forEach((rule) => {
         switch (rule.type) {
           case 'email':
-            this._validateEmail()
+            isError = this._validateEmail()
             break
           case 'mobile':
-            this._validateMobile()
+            isError = this._validateMobile()
             break
+          default:
+            isError = false
         }
       })
+      return isError
     },
 
     _validateEmail() {
@@ -75,6 +90,7 @@ Component({
         isError,
         errorMessage: isError ? `邮箱格式不正确` : '',
       })
+      return isError
     },
     _validateMobile() {
       const regex = /((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)/
@@ -83,6 +99,7 @@ Component({
         isError,
         errorMessage: isError ? `电话号码格式不正确` : '',
       })
+      return isError
     },
   },
 })

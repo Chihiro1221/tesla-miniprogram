@@ -44,6 +44,13 @@
           "name": "坐标详情",
           "pathName": "pages/map/location",
           "query": "id=1cf827d0625933f80006c4a25d705593",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "贷款计算器",
+          "pathName": "pages/lenders-calculator/index",
+          "query": "",
           "scene": null,
           "launchMode": "default"
         }

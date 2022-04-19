@@ -1,5 +1,7 @@
 <view class="form-item">
   <view wx:if="{{label}}" class="label">{{label}}</view>
-  <input disabled="{{disabled}}" model:value="{{value}}" bind:input="onInputChange" class="input {{isError ? 'error' :''}}" name="input" />
+  <input disabled="{{disabled}}" model:value="{{value}}" bind:input="onInputChange" class="input {{isError ? 'error' :''}} {{disabledClass && disabled ? 'disabled':''}}" name="input" />
   <view wx:if="{{isError}}" class="error-message">{{errorMessage}}</view>
+  <image wx:if="{{picker}}" class="picker-icon" src="/images/ic_arrow_down.svg"></image>
+  <view class="tip">{{tip}}</view>
 </view>

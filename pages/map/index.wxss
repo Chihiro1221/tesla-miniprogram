@@ -24,7 +24,6 @@
   align-items: center;
   background: #ffffff;
   border-radius: 40rpx;
-  padding: 4rpx 0;
   padding-right: 20rpx;
   box-shadow: 4rpx 4rpx 20rpx rgba(0, 0, 0, 0.1);
 }
@@ -33,6 +32,7 @@
   width: 50rpx;
   height: 50rpx;
   vertical-align: middle;
+  margin-top: 8rpx;
   opacity: 0.5;
 }
 

@@ -50,7 +50,7 @@ Page({
     const markers = this._buildMarker(this._filterCurrentClassificationOfMarkers())
     // 在重新过滤之前先查看是否有搜索定位
     const searchLocation = this.data.markers.find((item) => item.id === 99999)
-    markers.push(searchLocation)
+    if (searchLocation) markers.push(searchLocation)
     this.setData({
       markerClassifications,
       markers,

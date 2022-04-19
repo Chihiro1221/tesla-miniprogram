@@ -1,0 +1,155 @@
+.lenders-container {
+  background-color: #f4f4f4;
+  padding: 35rpx 45rpx;
+  padding-bottom: 500rpx;
+}
+.lenders-container > .title {
+  font-size: 38rpx;
+  text-align: center;
+  margin-bottom: 80rpx;
+}
+
+.subtitle {
+  font-size: 30rpx;
+  margin-bottom: 36rpx;
+}
+
+.finance {
+  margin-top: 100rpx;
+}
+
+.finance .finance-select .item {
+  padding: 20rpx 30rpx;
+  border: 4rpx solid #ccc;
+  border-radius: 50rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  transition: all 0.5s;
+}
+.active {
+  border-color: #4c66e0 !important;
+}
+
+.finance .desc {
+  margin-top: 36rpx;
+  font-size: 28rpx;
+  color: #39383d;
+}
+
+.finance .desc .more {
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.apply {
+  margin-top: 100rpx;
+}
+.apply .desc {
+  font-size: 24rpx;
+  color: #414242;
+  margin-bottom: 50rpx;
+}
+
+.apply .bank {
+  width: 100%;
+  border: 2rpx solid #cecece;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx 0;
+  border-radius: 24rpx;
+  margin-bottom: 40rpx;
+}
+.apply .bank .cover {
+  width: 150rpx;
+  height: 44rpx;
+}
+
+.calculate-result {
+  position: fixed;
+  bottom: 0;
+  left: 40rpx;
+  right: 40rpx;
+  background-color: white;
+  padding: 50rpx 30rpx;
+  border-radius: 24rpx;
+  box-sizing: border-box;
+  z-index: 999;
+  transition: all 0.5s;
+  animation-duration: 200ms;
+  /* width: 100%; */
+}
+
+.calculate-box {
+  transition: all 0.5s;
+  height: 400rpx;
+}
+
+.calculate-box .product {
+  padding: 0 40rpx;
+  text-align: center;
+  margin-bottom: 70rpx;
+}
+
+.calculate-box .product .cover {
+  width: 100%;
+}
+
+.calculate-box .product .name {
+  font-size: 36rpx;
+}
+.calculate-box .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx solid #d4d4d4;
+}
+.calculate-box .head .title {
+  font-size: 34rpx;
+  color: #171a1c;
+}
+.calculate-box .head .add-icon {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.calculate-box .price {
+  margin-top: 50rpx;
+}
+
+.calculate-box .price .row {
+  display: flex;
+  justify-content: space-between;
+  color: #171a1c;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+
+.calculate-box .price .last {
+  margin: 35rpx 0;
+}
+
+.calculate-box .price .row .big {
+  font-size: 38rpx;
+}
+
+.calculate-box .test {
+  padding: 0 30rpx;
+}
+.calculate-box .test-drive {
+  width: 100%;
+  padding: 10rpx 0;
+  border-radius: 70rpx;
+  border: 4rpx solid #1a1e25;
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 40rpx;
+}
+
+.calculate-box .footer-tip {
+  color: #c4c4c4;
+  font-size: 28rpx;
+  margin-top: 70rpx;
+}

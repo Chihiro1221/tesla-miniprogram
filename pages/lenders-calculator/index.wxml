@@ -1,0 +1,98 @@
+<view class="lenders-container">
+  <view class="title">金融服务</view>
+  <view class="car">
+    <view class="subtitle">选择感兴趣的车型</view>
+    <picker bindchange="bindPickerProductChange" value="{{currentProduct}}" range="{{products}}" range-key="name">
+      <tesla-input picker label="选择车系" value="{{products[currentProduct].name}}"></tesla-input>
+    </picker>
+    <picker bindchange="bindPickerProductLineChange" value="{{currentProductLine}}" range="{{productLines}}" range-key="name">
+      <tesla-input picker label="选择车型" value="{{productLines[currentProductLine].name}}"></tesla-input>
+    </picker>
+    <tesla-input label="车辆价格" value="{{productLines[currentProductLine].price}}"></tesla-input>
+  </view>
+  <view class="finance">
+    <view class="subtitle">选择金融方案</view>
+    <view class="finance-select">
+      <view wx:for="{{loans}}" wx:key="index" class="item {{currentLoans !== index||'active'}}" bind:tap="changeLoans" data-index="{{index}}">{{item}}</view>
+    </view>
+    <view class="desc">
+      通过特斯拉自营融资租赁购车，10%首付齐，1至5年租赁期限灵活选择，每月分期支付租金并使用车辆，租赁期满后依约获得车辆所有权。
+      <navigator url="#" class="more">了解更多</navigator>
+    </view>
+    <picker bindchange="bindPickerProductChange" value="{{currentFinance}}" range="{{['标准贷款']}}">
+      <tesla-input picker label="金融产品" value="标准贷款"></tesla-input>
+    </picker>
+    <picker bindchange="bindPickerProductLineChange" value="{{currentDeadline}}" range="{{['6期','12期']}}" range-key="name">
+      <tesla-input picker label="期数" value="12期"></tesla-input>
+    </picker>
+    <tesla-input label="首付/保证金比例 %" value="15"></tesla-input>
+    <tesla-input tip="折合年化利率 7.30%" class="disabled" disabled disabled-class label="年化费率 %" value="4.00"></tesla-input>
+  </view>
+  <view class="organization">
+    <view class="subtitle">查看适用金融机构</view>
+    <picker bindchange="bindPickerProductChange" value="{{currentFinance}}" range="{{['北京']}}">
+      <tesla-input picker label="上牌省份" value="北京"></tesla-input>
+    </picker>
+    <picker bindchange="bindPickerProductLineChange" value="{{currentDeadline}}" range="{{['北京']}}" range-key="name">
+      <tesla-input picker label="上牌城市" value="北京"></tesla-input>
+    </picker>
+    <picker bindchange="bindPickerProductLineChange" value="{{currentDeadline}}" range="{{['个人']}}" range-key="name">
+      <tesla-input picker label="上牌类型" value="个人"></tesla-input>
+    </picker>
+  </view>
+  <view class="apply">
+    <view class="subtitle">可申请在线预审批的金融机构</view>
+    <view class="desc">选择金融机构进行自助在线预审申请，提前了解您目前的贷款额度，帮助您在购车时更好地进行资金规划。</view>
+    <view class="bank active">
+      <image class="cover" src="/images/pingan.png"></image>
+    </view>
+    <view class="bank">
+      <image class="cover" src="/images/pingan.png"></image>
+    </view>
+  </view>
+
+  <view class="calculate-result">
+    <view class="calculate-box" style="{{calculateBox ? 'height:1300rpx' :'' }}">
+      <view wx:if="{{calculateBox}}" class="product">
+        <image class="cover" mode="widthFix" src="{{products[currentProduct].car_picture}}"></image>
+        <view class="name">
+          {{productLines[currentProductLine]['name']}}
+        </view>
+      </view>
+      <view class="head">
+        <view class="title">计算结果</view>
+        <image bind:tap="changeCalculateBoxStatus" class="add-icon" src="{{calculateBox ? '/images/minus-circle.png' : '/images/plus-circle.png'}}"></image>
+      </view>
+      <view class="price">
+        <view class="row">
+          <view>首付款/保障金</view>
+          <view>￥35,385</view>
+        </view>
+        <view wx:if="{{calculateBox}}" class="row">
+          <view>贷款/融资金额</view>
+          <view>￥200,515</view>
+        </view>
+        <view wx:if="{{calculateBox}}" class="row last">
+          <view>尾款比例</view>
+          <view>0%</view>
+        </view>
+        <view wx:if="{{calculateBox}}" class="row">
+          <view>尾款金额</view>
+          <view>￥0</view>
+        </view>
+        <view class="row">
+          <view>月供</view>
+          <view class="big">￥17,378</view>
+        </view>
+      </view>
+      <view class="test">
+        <view class="test-drive">
+          预约试驾
+        </view>
+      </view>
+      <view wx:if="{{calculateBox}}" class="footer-tip">
+        Tesla金融服务由有资质的金融机构提供，此计算结果仅供参考，最终以金融机构实际审核结果为准。现车和定制车型号及对应价格、贴息比例、贷款区间、库存量等相关信息均以实际情况为准，计算器结果仅供参考。
+      </view>
+    </view>
+  </view>
+</view>

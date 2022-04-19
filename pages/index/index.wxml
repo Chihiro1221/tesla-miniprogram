@@ -7,7 +7,7 @@
       <view class="time">2021年9月1号</view>
     </view>
   </block>
-  <view class="card-container">
+  <view bind:tap="gotoLenders" class="card-container">
     <image mode="widthFix" class="credit-cover" src="https://china-community-app.tesla.cn/wechatmini/credit_card.png"></image>
     <view class="content">
       <view class="title">贷款计算器</view>

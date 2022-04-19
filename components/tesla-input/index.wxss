@@ -12,11 +12,11 @@
   border: 2rpx solid transparent;
   box-sizing: border-box;
   font-size: 30rpx;
-  height: 80rpx;
+  height: 70rpx;
   background-color: white;
   border-radius: 40rpx;
   padding: 0 25rpx;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #333333;
 }
 .form-item .input.error {
@@ -28,4 +28,25 @@
   font-size: 28rpx;
   padding: 0 25rpx;
   color: red;
+}
+
+.form-item .picker-icon {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right: 30rpx;
+}
+
+.form-item .tip {
+  text-align: right;
+  font-size: 24rpx;
+  margin-top: 8rpx;
+  margin-right: 34rpx;
+  color: #9a9a9a;
+}
+
+.form-item .disabled {
+  background-color: #e2e2e3;
+  color: #a0a4ab;
 }
