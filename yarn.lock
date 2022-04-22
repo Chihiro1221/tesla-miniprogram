@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@vant/weapp@^1.10.2":
+  version "1.10.2"
+  resolved "https://registry.npmmirror.com/@vant/weapp/-/weapp-1.10.2.tgz#013fbf2fdc6d59d9e92bb82a0f772f032fb52945"
+  integrity sha512-caqA0xQxM4lMRncFsRPPVMDdEzUBCJ4xdFXuKReXpEU3qwnVIP/WIjVDIi7mWyS7xqz8C9WfSW5JL4PrlSq31w==
+
+dayjs@^1.11.1:
+  version "1.11.1"
+  resolved "https://registry.npmmirror.com/dayjs/-/dayjs-1.11.1.tgz#90b33a3dda3417258d48ad2771b415def6545eb0"
+  integrity sha512-ER7EjqVAMkRRsxNCC5YqJ9d9VQYuWdGt7aiH2qA5R5wt8ZmWaP2dLUSIK6y/kVzLMlmh1Tvu5xUf4M/wdGJ5KA==
+
 document-player-miniprogram@^1.5.3:
   version "1.5.3"
   resolved "https://registry.npmmirror.com/document-player-miniprogram/-/document-player-miniprogram-1.5.3.tgz#7d5a26661adb499205fa4e707409d2a5aecb8639"

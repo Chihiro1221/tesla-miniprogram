@@ -51,6 +51,34 @@
           "name": "贷款计算器",
           "pathName": "pages/lenders-calculator/index",
           "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "新手视频",
+          "pathName": "pages/video/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "活动页面",
+          "pathName": "pages/activity/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "活动详情",
+          "pathName": "pages/activity/detail",
+          "query": "id=f1dedd586261418b00dc1691602491aa",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "活动报名",
+          "pathName": "pages/activity/apply",
+          "query": "id=f1dedd586261418b00dc1691602491aa",
           "scene": null,
           "launchMode": "default"
         }

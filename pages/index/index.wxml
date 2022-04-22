@@ -14,7 +14,7 @@
       <view class="subtitle">定制我的金融方案</view>
     </view>
   </view>
-  <view class="card-container">
+  <view bind:tap="gotoVideo" class="card-container">
     <image mode="widthFix" class="video-cover" src="https://china-community-app.tesla.cn/wechatmini/card_bg.png"></image>
     <view class="content">
       <view class="title">新手使用指南</view>

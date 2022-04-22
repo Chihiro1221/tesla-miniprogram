@@ -1,0 +1,25 @@
+<view class="apply-container">
+  <form class="form" bind:submit="formSubmit">
+    <van-row>
+      <tesla-input model:value="{{email}}" class="tesla-input" rules="{{[{type:'email'}]}}" required label="邮箱"></tesla-input>
+    </van-row>
+    <van-row gutter="10">
+      <van-col span="12">
+        <tesla-input model:value="{{last_name}}" class="tesla-input" required label="姓氏"></tesla-input>
+      </van-col>
+      <van-col span="12">
+        <tesla-input model:value="{{first_name}}" class="tesla-input" required label="姓名"></tesla-input>
+      </van-col>
+    </van-row>
+    <van-row>
+      <tesla-input model:value="{{mobile}}" class="tesla-input" rules="{{[{type:'mobile'}]}}" required label="手机号"></tesla-input>
+    </van-row>
+    <van-row>
+      <view class="label">备注</view>
+      <textarea model:value="{{remark}}" class="tesla-textarea" cols="30" rows="10"></textarea>
+    </van-row>
+    <van-row>
+      <button class="submitBtn" form-type="submit">确认</button>
+    </van-row>
+  </form>
+</view>

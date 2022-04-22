@@ -1,2 +1,45 @@
-<!--pages/activity/index.wxml-->
-<text>pages/activity/index.wxml</text>
+<view class="activity-container">
+  <view class="header">
+    <image class="location-icon" src="/images/location_search.png"></image>
+    <view class="address-title">{{city}}</view>
+    <text class="toggle" bindtap="switchCity">切换</text>
+  </view>
+  <view wx:if="{{swiperActivity.length}}" class="swiper">
+    <swiper bindchange="swiperChange" current="{{currentSwiper}}">
+      <swiper-item class="swiper-item" wx:for="{{swiperActivity}}" wx:key="index">
+        <view class="item">
+          <image mode="scaleToFill" class="cover" src="{{item.cover}}"></image>
+          <view class="content">
+            <view class="title truncate">{{item.name}}</view>
+            <view class="desc truncate">{{item.description}}</view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view class="pagination">
+      <view wx:for="{{swiperActivity}}" wx:key="index" class="pagination-item {{index !== currentSwiper || 'active'}}"></view>
+    </view>
+  </view>
+  <view class="activity">
+    <view class="title">最新活动</view>
+    <block wx:if="{{activities.length}}">
+      <view bindtap="gotoDetail" data-id="{{item._id}}" wx:for="{{activities}}" wx:key="index" class="activity-item">
+        <view class="title">{{item.name}}</view>
+        <text class="master" wx:if="{{item.is_exclusive}}">车主专项</text>
+        <view class="meta">
+          <text class="time">{{item.start_time}} - {{item.end_time}}</text>
+          <view wx:if="{{item.status ==='applying_start'}}" class="badge">报名中</view>
+          <view wx:elif="{{item.status ==='applying_end'}}" class="badge info">已结束</view>
+          <view wx:else class="badge success">已报名</view>
+        </view>
+        <view class="address">{{item.address}}</view>
+      </view>
+    </block>
+    <view class="empty-container" wx:else>
+      <view class="link" bindtap="switchCity">选择其他城市</view>
+      <view class="empty">暂时没有更多了</view>
+    </view>
+  </view>
+  <view wx:if="{{isDone}}" class="empty">暂时没有更多了</view>
+  <van-loading wx:if="{{isLoading}}" custom-class="loading" size="24px" vertical>加载中...</van-loading>
+</view>

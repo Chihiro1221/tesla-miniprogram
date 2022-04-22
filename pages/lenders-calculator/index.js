@@ -6,13 +6,19 @@ Page({
   data: {
     calculateBox: false,
     products: null,
-    currentProduct: 0,
     productLines: null,
-    currentProductLine: 0,
     loans: ['合作机构贷款', '第三方机构贷款'],
+    finances: ['标准贷款', '审批贷款'],
+    deadlines: ['6期', '12期'],
+    currentProduct: 0,
+    currentProductLine: 0,
     currentLoans: 0,
     currentFinance: 0,
     currentDeadline: 0,
+    payment: 15,
+    annualizedRate: '4.00',
+    boardType: ['个人', '企业'],
+    currentBoard: 0,
   },
 
   /**
@@ -73,6 +79,28 @@ Page({
       currentLoans: index,
     })
   },
+
+  bindPickerFinanceChange(e) {
+    const { value } = e.detail
+    this.setData({
+      currentFinance: value,
+    })
+  },
+
+  bindPickerDeadlineChange(e) {
+    const { value } = e.detail
+    this.setData({
+      currentDeadline: value,
+    })
+  },
+
+  bindPickerBoardTypeChange(e) {
+    const { value } = e.detail
+    this.setData({
+      currentBoard: value,
+    })
+  },
+
   changeCalculateBoxStatus() {
     this.setData({
       calculateBox: !this.data.calculateBox,

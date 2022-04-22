@@ -1,0 +1,32 @@
+<view class="video-container">
+  <video class="video" id="myVideo" src="{{currentVideo.video}}" show-center-play-btn='{{false}}' show-play-btn="{{true}}" controls></video>
+  <view class="content">
+    <view class="head">
+      <view>前备箱</view>
+    </view>
+    <view class="body">
+      <view class="title">
+        <picker bindchange="bindPickerChange" value="{{currentProduct}}" range="{{products}}" range-key="name">
+          <text>{{products[currentProduct].name}}</text>
+          <image class="icon" src="/images/ic_arrow_down.svg"></image>
+        </picker>
+      </view>
+      <scroll-view scroll-x>
+        <view class="nav" style="{{'width:' + scrollWidth}}">
+          <block wx:for="{{products[currentProduct].study_video}}" wx:key="index">
+            <view data-index="{{index}}" bindtap="changeVideoCate" class="nav-item {{currentVideoCate !== index ||'active'}}">{{item.name}}</view>
+          </block>
+        </view>
+      </scroll-view>
+      <view class="video-body">
+        <view class="title">{{products[currentProduct].study_video[currentVideoCate].name}}</view>
+        <view class="video-area">
+          <view bindtap="changeCurrentVideo" data-index="{{index}}" wx:for="{{videos}}" wx:key="index" class="video-item">
+            <image class="picture" src="{{item.cover}}"></image>
+            <view class="text">{{item.title}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+.apply-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f6f6f6;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+
+.form {
+  margin-top: 30rpx;
+}
+
+.tesla-textarea {
+  background-color: #fff;
+  padding: 30rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 20rpx;
+}
+
+.label {
+  font-size: 28rpx;
+  color: #727272;
+  padding: 18rpx 25rpx;
+}

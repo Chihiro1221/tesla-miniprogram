@@ -85,4 +85,9 @@ Page({
       url: '../lenders-calculator/index',
     })
   },
+  gotoVideo() {
+    wx.navigateTo({
+      url: '../video/index',
+    })
+  },
 })

@@ -1,0 +1,85 @@
+.video-container {
+  height: 100vh;
+}
+.video-container .video {
+  width: 100vw;
+  height: calc(100vw * (9 / 16));
+}
+.video-container .content {
+  height: 100%;
+}
+.content .head {
+  padding: 40rpx 50rpx;
+  background: white;
+  font-size: 32rpx;
+}
+
+.content .body {
+  background-color: #f4f4f4;
+  padding: 40rpx 50rpx;
+  height: 100%;
+}
+
+.content .body .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+
+.content .body .title .icon {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 24rpx;
+}
+
+.content .body .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 60rpx;
+}
+
+.content .body .nav .nav-item {
+  font-size: 30rpx;
+  color: #757575;
+  border: 4rpx solid transparent;
+  padding-bottom: 10rpx;
+}
+
+.content .body .nav .nav-item.active {
+  color: #17191f;
+  border-bottom-color: #17191f;
+}
+
+.video-body {
+  padding: 0 24rpx;
+}
+
+.video-body .title {
+  font-weight: bold;
+  font-size: 32rpx;
+  margin-top: 50rpx;
+}
+
+.video-body .video-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40rpx;
+}
+
+.video-body .video-area .video-item {
+  width: 280rpx;
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+.video-body .video-area .video-item .picture {
+  width: 100%;
+  height: 175rpx;
+  margin-bottom: 24rpx;
+  border-radius: 20rpx;
+}
+
+.video-body .video-area .video-item .text {
+  font-size: 28rpx;
+}

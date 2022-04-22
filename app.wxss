@@ -2,3 +2,45 @@ swiper {
   width: 100%;
   height: 100%;
 }
+
+.truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.badge {
+  font-size: 20rpx;
+  padding: 2rpx 8rpx;
+  background-color: #000;
+  border-radius: 4rpx;
+  color: #edeff4;
+  margin-left: 20rpx;
+}
+.badge.success {
+  background-color: #3b8435;
+}
+.badge.info {
+  background-color: #888;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #486ada;
+  color: white;
+  border-radius: 40rpx;
+  font-weight: normal;
+  margin-top: 55rpx;
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

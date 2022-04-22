@@ -1,0 +1,43 @@
+.detail-container .banner {
+  width: 100vw;
+}
+
+.detail-container .content {
+  padding: 45rpx;
+}
+
+.content .title {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.content .meta {
+  display: flex;
+  align-items: center;
+  font-size: 22rpx;
+  color: #606061;
+  margin-top: 20rpx;
+}
+
+.content .address {
+  font-size: 22rpx;
+  color: #a5a5a5;
+  margin-top: 20rpx;
+}
+.content .subtitle {
+  margin-top: 80rpx;
+  font-size: 30rpx;
+  margin-bottom: 32rpx;
+}
+
+.start_time {
+  font-size: 28rpx;
+  margin-top: 140rpx;
+  text-align: center;
+  color: #3b3b3b;
+}
+
+.submitBtn.disabled {
+  background-color: #777 !important;
+  color: white !important;
+}

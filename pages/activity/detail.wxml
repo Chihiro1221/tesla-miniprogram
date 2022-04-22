@@ -1,0 +1,23 @@
+<van-loading wx:if="{{!detail}}" custom-class="loading" size="24px" vertical>加载中...</van-loading>
+<view wx:else class="detail-container">
+  <image src="{{detail.cover}}" class="banner"></image>
+  <view class="content">
+    <view class="title">{{detail.name}}</view>
+    <view wx:if="{{detail.is_exclusive}}" class="exclusive">车主专享</view>
+    <view class="meta">
+      <view class="time">
+        {{detail.start_time}} - {{detail.end_time}}
+      </view>
+      <view class="badge">报名中</view>
+    </view>
+    <view class="address">{{detail.address}}</view>
+    <view class="subtitle">活动详情</view>
+    <rich-text nodes="{{detail.detail}}"></rich-text>
+    <view class="start_time">
+      报名时间：{{detail.start_time}} - {{detail.end_time}}
+    </view>
+    <button wx:if="{{!isOvertime}}" disabled="{{applyStatus}}" style="margin-bottom:50rpx" class="submitBtn {{applyStatus ? 'disabled' : ''}}" bindtap="apply">{{applyStatus ? '已报名': '立即报名'}}
+    </button>
+    <button disabled="{{applyStatus}}" style="margin-bottom:50rpx" class="submitBtn disabled" wx:else>已超时</button>
+  </view>
+</view>

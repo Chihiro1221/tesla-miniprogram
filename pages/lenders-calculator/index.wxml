@@ -3,10 +3,10 @@
   <view class="car">
     <view class="subtitle">选择感兴趣的车型</view>
     <picker bindchange="bindPickerProductChange" value="{{currentProduct}}" range="{{products}}" range-key="name">
-      <tesla-input picker label="选择车系" value="{{products[currentProduct].name}}"></tesla-input>
+      <tesla-input disabled picker label="选择车系" value="{{products[currentProduct].name}}"></tesla-input>
     </picker>
     <picker bindchange="bindPickerProductLineChange" value="{{currentProductLine}}" range="{{productLines}}" range-key="name">
-      <tesla-input picker label="选择车型" value="{{productLines[currentProductLine].name}}"></tesla-input>
+      <tesla-input disabled picker label="选择车型" value="{{productLines[currentProductLine].name}}"></tesla-input>
     </picker>
     <tesla-input label="车辆价格" value="{{productLines[currentProductLine].price}}"></tesla-input>
   </view>
@@ -19,25 +19,25 @@
       通过特斯拉自营融资租赁购车，10%首付齐，1至5年租赁期限灵活选择，每月分期支付租金并使用车辆，租赁期满后依约获得车辆所有权。
       <navigator url="#" class="more">了解更多</navigator>
     </view>
-    <picker bindchange="bindPickerProductChange" value="{{currentFinance}}" range="{{['标准贷款']}}">
-      <tesla-input picker label="金融产品" value="标准贷款"></tesla-input>
+    <picker bindchange="bindPickerFinanceChange" value="{{currentFinance}}" range="{{finances}}">
+      <tesla-input disabled picker label="金融产品" value="{{finances[currentFinance]}}"></tesla-input>
     </picker>
-    <picker bindchange="bindPickerProductLineChange" value="{{currentDeadline}}" range="{{['6期','12期']}}" range-key="name">
-      <tesla-input picker label="期数" value="12期"></tesla-input>
+    <picker bindchange="bindPickerDeadlineChange" value="{{currentDeadline}}" range="{{deadlines}}">
+      <tesla-input disabled picker label="期数" value="{{deadlines[currentDeadline]}}"></tesla-input>
     </picker>
-    <tesla-input label="首付/保证金比例 %" value="15"></tesla-input>
-    <tesla-input tip="折合年化利率 7.30%" class="disabled" disabled disabled-class label="年化费率 %" value="4.00"></tesla-input>
+    <tesla-input label="首付/保证金比例 %" model:value="{{payment}}"></tesla-input>
+    <tesla-input tip="折合年化利率 7.30%" class="disabled" disabled disabled-class label="年化费率 %" value="{{annualizedRate}}"></tesla-input>
   </view>
   <view class="organization">
     <view class="subtitle">查看适用金融机构</view>
     <picker bindchange="bindPickerProductChange" value="{{currentFinance}}" range="{{['北京']}}">
-      <tesla-input picker label="上牌省份" value="北京"></tesla-input>
+      <tesla-input disabled picker label="上牌省份" value="北京"></tesla-input>
     </picker>
     <picker bindchange="bindPickerProductLineChange" value="{{currentDeadline}}" range="{{['北京']}}" range-key="name">
-      <tesla-input picker label="上牌城市" value="北京"></tesla-input>
+      <tesla-input disabled picker label="上牌城市" value="北京"></tesla-input>
     </picker>
-    <picker bindchange="bindPickerProductLineChange" value="{{currentDeadline}}" range="{{['个人']}}" range-key="name">
-      <tesla-input picker label="上牌类型" value="个人"></tesla-input>
+    <picker bindchange="bindPickerBoardTypeChange" value="{{currentBoard}}" range="{{boardType}}">
+      <tesla-input disabled picker label="上牌类型" value="{{boardType[currentBoard]}}"></tesla-input>
     </picker>
   </view>
   <view class="apply">

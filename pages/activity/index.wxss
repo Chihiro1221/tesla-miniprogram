@@ -1,1 +1,160 @@
-/* pages/activity/index.wxss */
+.activity-container {
+  width: 100vw;
+  /* height: 110vh; */
+  box-sizing: border-box;
+  /* padding: 0 50rpx; */
+}
+
+.header {
+  display: flex;
+  gap: 16rpx;
+  padding: 0 50rpx;
+  align-items: flex-end;
+}
+.header .location-icon {
+  width: 25rpx;
+  height: 35rpx;
+}
+.header .address-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  transform: translateY(4rpx);
+}
+.header .toggle {
+  font-size: 24rpx;
+  text-decoration: underline;
+}
+
+.swiper {
+  margin-top: 60rpx;
+}
+.swiper swiper {
+  height: 460rpx;
+}
+.swiper .swiper-item {
+  width: 650rpx;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+}
+.swiper .swiper-item .item {
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 4rpx 4rpx 20rpx rgba(0, 0, 0, 0.1);
+}
+.swiper .swiper-item .cover {
+  width: 100%;
+  height: 290rpx;
+}
+
+.swiper .swiper-item .content {
+  background: white;
+  padding: 30rpx;
+}
+
+.swiper .swiper-item .content .title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.swiper .swiper-item .content .desc {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #a9a9a9;
+}
+
+.swiper .pagination {
+  display: flex;
+  gap: 10rpx;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28rpx;
+}
+
+.swiper .pagination .pagination-item {
+  height: 4rpx;
+  width: 16rpx;
+  background-color: #d2d2d2;
+  transition: all 0.5s;
+}
+
+.swiper .pagination .pagination-item.active {
+  width: 30rpx;
+  background-color: #404040;
+}
+
+.activity {
+  padding: 0 50rpx;
+  margin-top: 95rpx;
+  padding-bottom: 30rpx;
+}
+
+.activity > .title {
+  font-size: 32rpx;
+  color: #3a3a3a;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+.activity .activity-item {
+  margin-bottom: 68rpx;
+}
+.activity .activity-item .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.activity .activity-item .master {
+  font-size: 20rpx;
+  padding: 4rpx 22rpx;
+  background-color: #000;
+  border-radius: 18rpx;
+  color: #edeff4;
+}
+.activity .activity-item .meta {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.activity .activity-item .meta .time {
+  color: #606060;
+  font-size: 22rpx;
+}
+
+.activity .activity-item .address {
+  font-size: 20rpx;
+  color: #a2a2a2;
+}
+
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-container .link {
+  margin-top: 20rpx;
+  font-size: 22rpx;
+  color: rgba(0, 81, 255, 0.63);
+}
+
+.empty-container .empty {
+  font-size: 22rpx;
+  color: #666;
+  margin-top: 40rpx;
+}
+
+.empty {
+  width: 100%;
+  text-align: center;
+  font-size: 22rpx;
+  color: #666;
+  margin-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.loading {
+  width: 100%;
+  height: auto;
+}

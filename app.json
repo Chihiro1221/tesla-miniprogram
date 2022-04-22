@@ -1,4 +1,11 @@
 {
+  "cloud": true,
+  "plugins": {
+    "citySelector": {
+      "version": "1.0.1",
+      "provider": "wx63ffb7b7894e99ae"
+    }
+  },
   "pages": [
     "pages/index/index",
     "pages/map/index",
@@ -7,7 +14,10 @@
     "pages/test-drive/index",
     "pages/magazine/index",
     "pages/map/location",
-    "pages/lenders-calculator/index"
+    "pages/lenders-calculator/index",
+    "pages/video/index",
+    "pages/activity/detail",
+    "pages/activity/apply"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -41,7 +51,6 @@
       }
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
   "permission": {
     "scope.userLocation": {
