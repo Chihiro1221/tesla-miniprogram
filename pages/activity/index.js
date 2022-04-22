@@ -64,9 +64,15 @@ Page({
       .limit(this.data.page)
       .skip(this.data.currentPage * this.data.page)
       .get()
-    data.forEach(async (item) => {
+    data.forEach((item) => {
       item.status = Date.now() > item.end_time.valueOf() ? 'applying_end' : 'applying_start'
-      item.status = (await this._judgeActivityIsApply(item._id)) ? 'applied' : item.status
+      this.db
+        .collection('activity_apply')
+        .where({ activity: item._id })
+        .get()
+        .then(({ data }) => {
+          item.status = data.length ? 'applied' : item.status
+        })
       item.start_time = dayjs(item.start_time).format('MM月DD日')
       item.end_time = dayjs(item.end_time).format('MM月DD日')
     })
@@ -74,11 +80,6 @@ Page({
       isLoading: false,
     })
     return data
-  },
-
-  async _judgeActivityIsApply(id) {
-    const { data } = await this.db.collection('activity_apply').where({ activity: id }).get()
-    return !!data.length
   },
 
   swiperChange(e) {

@@ -8,7 +8,9 @@
       <view class="time">
         {{detail.start_time}} - {{detail.end_time}}
       </view>
-      <view class="badge">报名中</view>
+      <view wx:if="{{!isOvertime && applyStatus}}" class="badge success">已报名</view>
+      <view wx:elif="{{!isOvertime}}" class="badge">报名中</view>
+      <view wx:else="" class="badge info">已结束</view>
     </view>
     <view class="address">{{detail.address}}</view>
     <view class="subtitle">活动详情</view>
@@ -18,6 +20,6 @@
     </view>
     <button wx:if="{{!isOvertime}}" disabled="{{applyStatus}}" style="margin-bottom:50rpx" class="submitBtn {{applyStatus ? 'disabled' : ''}}" bindtap="apply">{{applyStatus ? '已报名': '立即报名'}}
     </button>
-    <button disabled="{{applyStatus}}" style="margin-bottom:50rpx" class="submitBtn disabled" wx:else>已超时</button>
+    <button wx:else disabled="{{applyStatus}}" style="margin-bottom:50rpx" class="submitBtn disabled" wx:else>已超时</button>
   </view>
 </view>
