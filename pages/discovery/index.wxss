@@ -1,0 +1,87 @@
+.discovery-container {
+  padding: 0 50rpx;
+}
+.vant-tab {
+  flex: none !important;
+  font-size: 28rpx !important;
+}
+.tab-active-class {
+  font-size: 30rpx !important;
+  font-weight: bold !important;
+}
+
+.swiper {
+  height: 300rpx;
+  margin-top: 10rpx;
+}
+.swiper .swiper-item {
+  border-radius: 20rpx;
+  width: 650rpx;
+  height: 300rpx;
+  overflow: hidden;
+  box-shadow: 8rpx 8rpx 20rpx rgba(0, 0, 0, 0.2);
+}
+.swiper .swiper-item image {
+  width: 100%;
+}
+
+.article-list {
+  margin-top: 70rpx;
+}
+
+.article-list .list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60rpx;
+}
+
+.article-list .list-item .content {
+  flex: 1;
+}
+.article-list .list-item .content .title {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.article-list .list-item .content .time {
+  margin-top: 26rpx;
+  font-size: 24rpx;
+  color: #9d9d9d;
+}
+
+.article-list .list-item .cover {
+  width: 210rpx;
+  height: 140rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.article-list .list-item .cover image {
+  width: 100%;
+  height: 100%;
+}
+
+.cate-list {
+  margin-top: 70rpx;
+  display: flex;
+  align-items: center;
+  gap: 30rpx;
+}
+.cate-list .cate-item {
+  margin-bottom: 70rpx;
+  flex: 1;
+}
+.cate-list .cate-item .cover {
+  width: 100%;
+  height: 210rpx;
+  border-radius: 20rpx;
+  box-shadow: 4rpx 4rpx 20rpx rgba(0, 0, 0, 0.2);
+  margin-bottom: 20rpx;
+}
+.cate-list .cate-item .title {
+  text-align: center;
+  font-size: 28rpx;
+}
+.my-row {
+  margin: 0 !important;
+}

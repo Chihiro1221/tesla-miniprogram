@@ -1,0 +1,11 @@
+<view class="detail">
+  <image mode="widthFix" class="cover" src="{{article.cover}}"></image>
+  <view class="content-container">
+    <view class="title">{{article.title}}</view>
+    <view class="meta">
+      <view class="time">{{article.created_time}}</view>
+      <view class="browse">浏览 {{article.browse}}</view>
+    </view>
+    <rich-text nodes="{{article.content}}"></rich-text>
+  </view>
+</view>

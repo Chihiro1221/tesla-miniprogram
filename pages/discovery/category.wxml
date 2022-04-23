@@ -1,0 +1,13 @@
+<view class="category-container">
+  <image mode="aspectFill" class="cover" src="{{category.cover}}"></image>
+  <view class="content">
+    <view class="title">{{category.name}}</view>
+    <view data-id="{{item._id}}" bindtap="gotoDetail" wx:for="{{articles}}" wx:key="index" class="content-item">
+      <view class="desc">
+        <view class="title">{{item.title}}</view>
+        <view class="time">{{item.created_time}}</view>
+      </view>
+      <image class="cover" src="{{item.cover}}"></image>
+    </view>
+  </view>
+</view>

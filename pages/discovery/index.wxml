@@ -1,0 +1,40 @@
+<view class="discovery-container">
+  <van-tabs tab-class="vant-tab" tab-active-class="tab-active-class" color="#12151b" line-width="20" active="{{ active }}">
+    <van-tab title="推荐">
+      <swiper class="swiper">
+        <swiper-item>
+          <view class="swiper-item">
+            <image mode="aspectFill" src="/images/tesla.png"></image>
+          </view>
+        </swiper-item>
+      </swiper>
+      <view class="article-list">
+        <view bindtap="gotoDetail" data-id="{{item._id}}" wx:for="{{articles}}" wx:key="index" class="list-item">
+          <view class="content">
+            <view class="title">{{item.title}}</view>
+            <view class="time">{{item.created_time}}</view>
+          </view>
+          <view class="cover">
+            <image mode="aspectFill" src="{{item.cover}}"></image>
+          </view>
+        </view>
+      </view>
+    </van-tab>
+    <van-tab title="支持">
+      <swiper class="swiper">
+        <swiper-item>
+          <view class="swiper-item">
+            <image mode="aspectFill" src="/images/tesla.png"></image>
+          </view>
+        </swiper-item>
+      </swiper>
+      <view class="cate-list">
+        <view bindtap="gotoCate" wx:for="{{articleCategories}}" wx:key="index" data-id="{{item._id}}" class="cate-item">
+          <image class="cover" src="{{item.cover}}"></image>
+          <view class="title">{{item.name}}</view>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+
+</view>

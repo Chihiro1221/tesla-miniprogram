@@ -79,6 +79,27 @@
           "name": "活动报名",
           "pathName": "pages/activity/apply",
           "query": "id=f1dedd586261418b00dc1691602491aa",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "发现页面",
+          "pathName": "pages/discovery/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "文章详情",
+          "pathName": "pages/discovery/detail",
+          "query": "id=1fee1e976263473101a32e4c3d074aed",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "文章分类",
+          "pathName": "pages/discovery/category",
+          "query": "id=5464a29462634705023b1a077642ae20",
           "scene": null,
           "launchMode": "default"
         }

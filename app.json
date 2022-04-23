@@ -17,7 +17,10 @@
     "pages/lenders-calculator/index",
     "pages/video/index",
     "pages/activity/detail",
-    "pages/activity/apply"
+    "pages/activity/apply",
+    "pages/discovery/index",
+    "pages/discovery/detail",
+    "pages/discovery/category"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -31,6 +34,12 @@
     "selectedColor": "#1b1b1b",
     "borderStyle": "white",
     "list": [
+      {
+        "pagePath": "pages/discovery/index",
+        "text": "发现",
+        "iconPath": "/images/nav/discovery.png",
+        "selectedIconPath": "/images/nav/discovery_select.png"
+      },
       {
         "pagePath": "pages/index/index",
         "text": "Tesla",
