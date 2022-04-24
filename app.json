@@ -1,5 +1,6 @@
 {
   "cloud": true,
+  "lazyCodeLoading": "requiredComponents",
   "plugins": {
     "citySelector": {
       "version": "1.0.1",
