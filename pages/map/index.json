@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "tesla-search-input": "/components/tesla-search-input"
-  },
-  "navigationStyle": "custom"
-}

@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "tesla-input": "/components/tesla-input/index"
-  },
-  "navigationBarTitleText": "预约试乘试驾"
-}

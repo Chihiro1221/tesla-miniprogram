@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tesla-input": "/components/tesla-input"
+  },
+  "navigationBarTitleText": "金融服务 | Tesla"
+}
